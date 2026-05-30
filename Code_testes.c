@@ -13,6 +13,7 @@ typedef struct
 ListaP coypLista(ListaP *ap);
 void clearLista(ListaP *ap);
 void extendLista(ListaP *ap1, ListaP *ap2);
+int maximo(ListaP *ap); // Protótipo adicionado
 
 int main()
 {
@@ -33,6 +34,9 @@ int main()
         printf(" %d  ", B.tab[i]);
     }
     printf("\nTamanho dessa lista: %d", B.tam);
+
+    // Teste da função máximo
+    printf("\nMaior valor da lista: %d", maximo(&B));
 
     clearLista(&B);
     printf("\nLista limpa: ");
@@ -73,4 +77,24 @@ void extendLista(ListaP *ap1, ListaP *ap2)
         ap1->tab[k] = ap2->tab[i];
         i++;
     }
+}
+
+int maximo(ListaP *ap)
+{
+    if (ap->tam != 0)
+    {
+        int maior, k, n, aux;
+        n = ap->tam;
+        maior = ap->tab[1];
+        for (k = 2; k < n; k++)
+        {
+            aux = ap->tab[k];
+            if (aux > maior)
+            {
+                maior = aux;
+            }
+        }
+        return maior;
+    }
+    return 0;
 }
