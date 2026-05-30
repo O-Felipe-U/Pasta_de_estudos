@@ -13,7 +13,8 @@ typedef struct
 ListaP coypLista(ListaP *ap);
 void clearLista(ListaP *ap);
 void extendLista(ListaP *ap1, ListaP *ap2);
-int maximo(ListaP *ap); // Protótipo adicionado
+int maximo(ListaP *ap);
+void reverse(ListaP *ap); // Protótipo da nova função
 
 int main()
 {
@@ -35,8 +36,15 @@ int main()
     }
     printf("\nTamanho dessa lista: %d", B.tam);
 
-    // Teste da função máximo
     printf("\nMaior valor da lista: %d", maximo(&B));
+
+    // Testando a inversão da lista
+    printf("\nLista inversa: ");
+    reverse(&B);
+    for (int i = 1; i <= B.tam; i++)
+    {
+        printf(" %d  ", B.tab[i]);
+    }
 
     clearLista(&B);
     printf("\nLista limpa: ");
@@ -97,4 +105,19 @@ int maximo(ListaP *ap)
         return maior;
     }
     return 0;
+}
+
+void reverse(ListaP *ap)
+{
+    int n, meio, i, aux;
+
+    meio = (ap->tam) / 2;
+    n = ap->tam;
+    for (i = 1; i <= meio; i++)
+    {
+        aux = ap->tab[n];
+        ap->tab[n] = ap->tab[i];
+        ap->tab[i] = aux;
+        n--;
+    }
 }
