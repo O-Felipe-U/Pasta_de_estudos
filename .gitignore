@@ -1,34 +1,12 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Ignored default folder with query files
-/queries/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+# Executáveis compilados
+*.exe
+*.out
+*.app
 
-# ------ IntelliJ IDEA ------
+# Arquivos de Objeto e Links
+*.o
+*.obj
+
+# Pastas de IDEs
+.vscode/
 .idea/
-*.iws
-*.iml
-*.ipr
-*.py
-out/
-gen/
-
-# --- Arquivos de Build/Compilação comuns ---
-target/
-build/
-*.ctxt
-*.class
-*.bluej
-
-# --- Arquivos do Sistema Operacional ---
-.DS_Store
-Thumbs.db
-
-# --- Arquivos de Log e Temporários ---
-*.log
-tmp/
