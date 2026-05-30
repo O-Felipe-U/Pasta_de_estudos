@@ -11,3 +11,9 @@ O projeto foi desenvolvido como parte de um desafio individual focado em boas pr
 - Estender Lista (`extendLista`): Concatena os elementos de uma segunda lista ao final da primeira.
 - Buscar Máximo (`maximo`): Varre a lista em busca do maior valor contido nela.
 - Inverter Lista (`reverse`): Inverte a ordem dos elementos contidos na lista diretamente na memória.
+
+## Como usar
+
+Pegue o código fonte e compile ele, as operações ja serão realizadas, caso queira mudar as operações mude a parte do main.
+Para criar uma lista nova use o tipo abstrato(ListaP nome_da_variavel = {tamanho, {Sua lista}})
+Use as funções ja feitas mas da sua forma, se atente a qual o tipo de retorno de cada uma quando for fazer a sua implementação
