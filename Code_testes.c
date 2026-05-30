@@ -86,7 +86,7 @@ int maximo(ListaP *ap)
         int maior, k, n, aux;
         n = ap->tam;
         maior = ap->tab[1];
-        for (k = 2; k < n; k++)
+        for (k = 2; k <= n; k++)
         {
             aux = ap->tab[k];
             if (aux > maior)
