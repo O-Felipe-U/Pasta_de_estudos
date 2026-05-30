@@ -12,6 +12,7 @@ typedef struct
 
 ListaP coypLista(ListaP *ap);
 void clearLista(ListaP *ap);
+void extendLista(ListaP *ap1, ListaP *ap2);
 
 int main()
 {
@@ -24,6 +25,14 @@ int main()
     {
         printf(" %d  ", B.tab[i]);
     }
+
+    extendLista(&B, &A);
+    printf("\nLista extendida");
+    for (int i = 1; i <= B.tam; i++)
+    {
+        printf(" %d  ", B.tab[i]);
+    }
+    printf("\nTamanho dessa lista: %d", B.tam);
 
     clearLista(&B);
     printf("\nLista limpa: ");
@@ -50,4 +59,18 @@ ListaP coypLista(ListaP *ap)
 void clearLista(ListaP *ap)
 {
     ap->tam = 0;
+}
+
+void extendLista(ListaP *ap1, ListaP *ap2)
+{
+    int k, n, y, i;
+    i = 1;
+    n = ap1->tam;
+    y = ap2->tam;
+    ap1->tam = n + y;
+    for (k = n + 1; k <= (n + y); k++)
+    {
+        ap1->tab[k] = ap2->tab[i];
+        i++;
+    }
 }
